@@ -37,5 +37,12 @@
 */
 
 int task01(int number) {
-	return 0;
+
+	if (number < 0) {
+		number = -number;
+	}
+	if (number > 9999) {
+		return 0;
+	}
+	return (number / 1000) + (number % 1000 / 100) + (number % 100 / 10) + (number % 10);
 }
